@@ -8,7 +8,7 @@ class Fish:
         self.image = pygame.transform.smoothscale(self.image, (scale, scale))
         self.rect = self.image.get_rect()
         self.rect.center = pos
-        self.speed = pygame.math.Vector2(0, random.randit(2, 5))
+        self.speed = pygame.math.Vector2(0, random.randint(2, 5))
 
         rotation = random.randint(0, 360)
         self.speed.rotate_ip(rotation)

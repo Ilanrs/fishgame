@@ -14,9 +14,10 @@ clock = pygame.time.Clock()
 color = (0, 127, 255)
 fishes = []
 
+
 def main():
     for i in range(10):
-        fishes.append(Fish((width/2, height/2)))
+        fishes.append(Fish((width / 2, height / 2)))
     while True:
         clock.tick(60)
         for event in pygame.event.get():
@@ -24,7 +25,7 @@ def main():
                 sys.exit()
             if event.type == KEYDOWN:
                 if event.key == K_d:
-                    for i in range (len(fishes) // 2):
+                    for i in range(len(fishes) // 2):
                         fishes.pop(0)
         screen.fill(color)
         for fish in fishes:
